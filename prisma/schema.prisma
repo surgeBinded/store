@@ -1,0 +1,14 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // directUrl      = env("DIRECT_URL")
+}
+
+generator client {
+  provider = ""
+}
+
+model TestProdifle {
+  id String @id @default(uuid())
+  name String
+}
